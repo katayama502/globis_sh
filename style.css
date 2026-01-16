@@ -377,3 +377,91 @@ ul {
         grid-template-columns: 1fr;
     }
 }
+
+/* News Section */
+.news-section {
+    background-color: transparent; /* Or a slightly different shade if needed */
+    padding-bottom: 80px; /* Adjust as needed */
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.news-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: var(--transition);
+    border-radius: 4px; /* Slight rounded corners */
+    position: relative;
+    overflow: hidden;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    background: rgba(44, 65, 102, 0.8);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.news-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-color: var(--accent);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.news-card:hover::before {
+    opacity: 1;
+}
+
+.news-date {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-family: var(--font-heading);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news-tags {
+    margin-bottom: 15px;
+}
+
+.news-tag {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.news-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+    line-height: 1.4;
+    font-family: var(--font-body); /* Ensure Japanese text looks good */
+    font-weight: 700;
+}
+
+.news-card:hover .news-title {
+    color: var(--accent);
+}
+
+.news-excerpt {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
