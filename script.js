@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // Intersection Observer for scroll animations
     const observerOptions = {
         root: null,
@@ -41,4 +41,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    // Hamburger Menu Toggle
+    const hamburgerBtn = document.querySelector('.hamburger-btn');
+    const siteNav = document.querySelector('.site-nav');
+
+    if (hamburgerBtn && siteNav) {
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            siteNav.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        siteNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                siteNav.classList.remove('active');
+            });
+        });
+    }
 });
