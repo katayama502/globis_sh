@@ -245,13 +245,57 @@ ul {
 /* Concept Section */
 .concept-body {
     max-width: 800px;
-    margin-left: auto; /* Right align feel similar to Coral Cap sometimes */
+    margin-left: auto;
     font-size: 1.1rem;
     color: var(--text-secondary);
 }
 
 .concept-body p {
     margin-bottom: 30px;
+}
+
+.concept-detail-block {
+    margin-bottom: 40px;
+}
+
+.concept-detail-block:last-child {
+    margin-bottom: 0;
+}
+
+.concept-subtitle {
+    display: inline-block;
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--accent);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.concept-text-large {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.concept-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.concept-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.concept-list li::before {
+    content: '•';
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 /* Info Section */
@@ -289,6 +333,59 @@ ul {
     font-size: 0.9rem;
     color: var(--text-secondary);
     margin-top: 5px;
+}
+
+.info-additional {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.info-details-block {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(30, 41, 59, 0.3);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.info-details-block h4 {
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-family: var(--font-heading);
+    letter-spacing: 0.05em;
+}
+
+.target-list {
+    list-style: none;
+}
+
+.target-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.target-list li::before {
+    content: '•';
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.target-list .note {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 5px;
+    margin-left: 0;
 }
 
 /* RSVP Section */
